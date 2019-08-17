@@ -15,12 +15,10 @@ if __name__ == '__main__':
     lb = Lbws("192.168.1.1", "admin", "your password")
 
     print("Date et heure locale  : {0}".format(datetime.now()))
-#    print("Statut connexion ppp  : {0} ({1})".format(lb.ppp_mib.ConnectionStatus, lb.ppp_mib.TransportType))
     print("Statut du lien DSL    : {0}".format(lb.wan_status.LinkState))
     print("Type de protocol      : {0}".format(lb.wan_status.Protocol))
     print("Etat synchronisation  : {0}".format(lb.dsl_mib.LinkStatus))
     print("Type de connexion     : {0} ({1})".format(lb.dsl_mib.ModulationHint, lb.dsl_mib.ModulationType))
-#    print("User ppp              : {0}".format(lb.ppp_mib.Username))
 
     print("Débit descendant      : {0} Kb/s (marge de bruit : {1} dB)".format(
         lb.dsl_mib.DownstreamCurrRate,
