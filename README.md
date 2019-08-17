@@ -1,2 +1,2 @@
 # lbws
-Quick and dirty python library to interact with live box
+Quick and dirty python library to interact with Orange Livebox
